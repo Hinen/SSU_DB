@@ -53,39 +53,39 @@
         </div>
 
         <br/>
-        <div align="center">
-            <table>
-                <td class="inputName">사용자 ID</td>
-                <td class="inputBox"><input type="text" name="userID" size="10"></td>
-                <td class="inputDesc">(10자이하, 한글/영문/숫자 혼용가능, 대소문자 구분없음)</td>
-            </table>
-        </div>
+        <form method="post" action="psb.php" onsubmit="return inputCheck();" onreset="resetPage();">
+            <div align="center">
+                <table>
+                    <td class="inputName">사용자 ID</td>
+                    <td class="inputBox"><input type="text" name="userID" size="10"></td>
+                    <td class="inputDesc">(10자이하, 한글/영문/숫자 혼용가능, 대소문자 구분없음)</td>
+                </table>
+            </div>
 
-        <div align="center">
-            <table>
-                <td class="inputName">비밀번호</td>
-                <td class="inputBox"><input type="text" name="userPassword" size="15"></td>
-                <td class="inputDesc">(입력시 CapsLock키 확인후 입력)</td>
-            </table>
-        </div>
+            <div align="center">
+                <table>
+                    <td class="inputName">비밀번호</td>
+                    <td class="inputBox"><input type="text" name="userPassword" size="15"></td>
+                    <td class="inputDesc">(입력시 CapsLock키 확인후 입력)</td>
+                </table>
+            </div>
 
-        <div align="center">
-            <table>
-                <td class="inputName">이름</td>
-                <td class="inputBox"><input type="text" name="userName" size="15"></td>
-                <td class="inputDesc">(본인의 <b>실명</b>을 입력 하십시오)</td>
-            </table>
-        </div>
+            <div align="center">
+                <table>
+                    <td class="inputName">이름</td>
+                    <td class="inputBox"><input type="text" name="userName" size="15"></td>
+                    <td class="inputDesc">(본인의 <b>실명</b>을 입력 하십시오)</td>
+                </table>
+            </div>
 
-        <br/>
-        <br/>
-        <div align="center">
-            <td>
-                <form method="post" action="psb.php" onsubmit="return inputCheck();" onreset="resetPage();">
+            <br/>
+            <br/>
+            <div align="center">
+                <td>
                     <input type="submit" name="joinBtn" width="1000px" value="가입하기" class="inputBtn">
                     <input type="reset" name="cancelBtn" value="가입취소" class="inputBtn">
-                </form>
-            </td>
-        </div>
+                </td>
+            </div>
+        </form>
     </body>
 </html>
