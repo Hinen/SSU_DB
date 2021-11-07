@@ -2,6 +2,13 @@
     $userID = $_POST['userID'];
     $userName = $_POST['userName'];
     $userPassword = $_POST['userPassword'];
+
+    $db = mysqli_connect("localhost:3307", "root", "hinen15", "ssu");
+    $query = "INSERT INTO members(mid, mname, mpass)" . "VALUES('$userID', '$userName', '$userPassword')";
+    $queryResult = mysqli_query($db,$query);
+
+    mysqli_free_result($queryResult);
+    mysqli_close($db);
 ?>
 
 <!DOCTYPE html>
