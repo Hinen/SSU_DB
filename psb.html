@@ -27,6 +27,19 @@
         </style>
 
         <script>
+            function inputCheck() {
+                var userID = document.getElementsByName("userID")[0];
+                var userPassword = document.getElementsByName("userPassword")[0];
+                var userName = document.getElementsByName("userName")[0];
+
+                if (userID.value == "" || userPassword.value == "" || userName.value == "") {
+                    alert("입력하지 않은 데이터가 존재합니다.")
+                    return false;
+                }
+
+                return true;
+            }
+
             function resetPage() {
                 location.reload();
             }
@@ -68,7 +81,7 @@
         <br/>
         <div align="center">
             <td>
-                <form method="post" action="psb.php" onreset="resetPage();">
+                <form method="post" action="psb.php" onsubmit="return inputCheck();" onreset="resetPage();">
                     <input type="submit" name="joinBtn" width="1000px" value="가입하기" class="inputBtn">
                     <input type="reset" name="cancelBtn" value="가입취소" class="inputBtn">
                 </form>
